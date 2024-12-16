@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy bday Dadu :)</title>
+    <link rel="icon" type="images/jpg" href="thumnail.png">
+    <style>
+        body {
+            margin: 0;
+            background: #D0FFF1/*#DFFFFC* just backup*/;
+            transition: 1s;
+            overflow: hidden;
+        }
+        .ft1 {
+  font-family: "Cookie", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.ft2 {
+    font-family: sans-serif;
+}
+.title {
+    user-select: none;
+    font-size: 60px;
+    text-align: center;
+    font-weight: 900;
+}
+.initial-cover {
+    width:100%;
+    display: flex;
+    justify-content: center;
+    animation-name: anim1;
+    animation-duration: 0.7s;
+    animation-play-state: paused;
+}
+.initial-card {
+    border-radius: 10px;
+    user-select: none;
+    display: block;
+    width: 80%;
+    background: #81bffc;
+    overflow: hidden;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.initial-card:hover{
+    cursor: pointer;
+    .text2 {
+        font-size: 31px;
+    }
+}
+.text1 {
+    font-size: 48px;
+    text-align: center;
+
+}
+.text2 {
+    font-size: 30px;
+    text-align: center;
+    transition: 1s;
+}
+@keyframes anim1 {
+    0%{opacity: 1;}
+    100%{opacity: 0;}
+}
+.card {
+    width:100%;
+    display: none;
+    justify-content: center;
+    animation-name: anim2;
+    animation-duration: 0.7s;
+    animation-play-state: paused;
+}
+@keyframes anim2 {
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+.title2 {
+    font-size: 40px;
+    text-align: center;
+    font-weight: 900;
+    user-select: none;
+    margin-top: 4px;
+}
+.rcard {
+    border-radius: 10px;
+    width: 80%;
+    background: #B5F8F1;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: 0.51s;
+    display: block;
+}
+.desp1 {
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 900;
+    
+}
+.back-card {
+    position: absolute;
+    z-index: -1;
+    border-radius: 10px;
+    user-select: none;
+    display: block;
+    width: 79%;
+    height: 50px;
+    background: #B5F8F1;
+    overflow: hidden;
+    margin-top: 0px;
+    transition: 1s;
+    /*-15*/
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.title3 {
+    font-size: 40px;
+    text-align: center;
+    font-weight: 900;
+    user-select: none;
+    margin-top: 4px;
+}
+.ebutton {
+    display: none;
+    width: 100%;
+    justify-content: center;
+    animation-name: anim2;
+    animation-duration: 0.7s;
+    animation-play-state: paused;
+}
+.button1 {
+    width: 100px;
+    height: 30px;
+    font-weight: 900;
+    font-size: 20px;
+    background-color: white;
+    border: none;
+    border-radius: 10px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.button1:hover {
+    filter: brightness(80%);
+}
+.theme {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.tt1 {
+    font-size: 30px;
+    margin-left: 5px;
+}
+.text3 {
+    font-size: 25px;
+    margin-top: 0px;
+}
+.fp1 {
+    z-index: 1;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top:0;
+    left: 0;
+    background: linear-gradient(to right,rgb(34, 151, 190,0.7) 10%,rgba(111, 173, 236, 0.7) 80%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation-name: anim1;
+    animation-duration: 0.7s;
+    animation-play-state: paused;
+    user-select: none;
+}
+.vft1 {
+    font-size: 60px;
+    font-weight: 900;
+    color: white;
+    margin-bottom: 0px;
+}
+.vft2 {
+    font-size: 30px;
+    font-weight: 900;
+    color: white;
+    margin-bottom: 0px;
+    text-align: center;
+    transition: 0.7s;
+    visibility: hidden;
+    animation-name: anim2;
+    animation-duration: 0.7s;
+    animation-play-state: paused;
+}
+.sn1 {
+    font-size: 90px;
+    color: white
+}
+.scn2 {
+    font-size: 90px;
+    position: absolute;
+    top:150px;
+    left: 0;
+    transition: transform 0.7s ease-in-out;
+    color: gold;
+}
+.scn1 {
+    font-size: 90px;
+    position: absolute;
+    left: 0;
+    transition: transform 0.7s ease-in-out;
+    color: white;
+}
+.gap1 {
+    margin-right: 15px;
+}
+.anim2 {
+    visibility: hidden;
+    animation-name: anim2;
+    animation-duration: 0.7s;
+    animation-play-state: paused;
+}
+.about_me {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 2;
+    background: rgba(0, 0, 0,0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    animation-name: empty;
+    animation-duration: 0.7s;
+    animation-play-state: paused;
+}
+.about_box1 {
+    width: 80%;
+    background-color: white;
+    border: none;
+    border-radius: 15px;
+    display: block;
+}
+.amt1 {
+    font-size: 40px;
+    
+}
+.amd1 {
+    font-size: 15px;
+}
+.button2 {
+    width: 100px;
+    height: 30px;
+    font-weight: 900;
+    font-size: 20px;
+    background-color: rgb(240, 233, 233);
+    border: none;
+    border-radius: 10px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.button2:hover {
+    filter: brightness(80%);
+}
+.rcopy1 {
+    position: fixed;
+    left: 5px;
+    bottom: 15px;
+    width: 300px;
+    height: 40px;
+    background-color: white;
+    z-index: 3;
+    border: none;
+    border-radius: 10px;
+    display: none;
+    align-items: center;
+    transition: 0.7s;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.ct1 {
+    margin-left: 10px;
+    font-size: 20px;
+}
+@media (max-width: 520px) {
+    .rcopy1 {
+        width: 97%;
+    }
+}
+    </style>
+</head>
+<body id="body">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
+
+<div style="width: 100%;display: flex;justify-content: center;"><div style="width: 80%;display: flex;justify-content: center;"><p class="txt1 ft1 title">Happy Bday Dadu</p></div></div>
+<div class="theme" id="theme">
+    <a class="ft1 tt1">Theme:</a>
+    <div style="width: 30px;height: 30px;background: #D0FFF1;border-radius: 50px;margin-left: 5px;border: 2px solid white;cursor: pointer;" onclick="document.getElementById('body').style.background = this.style.background"></div>
+    <div style="width: 30px;height: 30px;background: aquamarine;border-radius: 50px;margin-left: 5px;border: 2px solid white;cursor: pointer;" onclick="document.getElementById('body').style.background = this.style.background"></div>
+    <div style="width: 30px;height: 30px;background: rgb(22, 145, 222);border-radius: 50px;margin-left: 5px;border: 2px solid white;cursor: pointer;" onclick="document.getElementById('body').style.background = this.style.background"></div>
+    <div style="width: 30px;height: 30px;background: rgb(21, 99, 210);border-radius: 50px;margin-left: 5px;border: 2px solid white;cursor: pointer;" onclick="document.getElementById('body').style.background = this.style.background"></div>
+</div><br>
+<div class="initial-cover" id="initial-cover1" onclick="click1()">
+    <div class="back-card" id="back-card1">
+        <p class="ft1 txt1 title3">Message for you,</p>
+    </div>
+    <div class="initial-card" id="inital-card1" onmouseover="mousein1()" onmouseout="mouseout1()" >
+            <div style="width: 100%;display: flex;justify-content: center;"><div style="width: 80%;display: flex;justify-content: center;"><p class="txt1 ft1 text1">Bday letter🎊</p></div></div>
+            <div style="width: 100%;display: flex;justify-content: center;margin-top: -39px;"><div style="width: 80%;display: flex;justify-content: center;"><p class="txt1 ft1 text3" >From Ryan</p></div></div>
+            <br><br>
+            <p class="txt1 ft1 text2" id="chk1">Open the card</p>
+            <br>
+    </div>
+
+</div>
+<div class="card" id="card1">
+    <div class="rcard" id="rcard1">
+        <p class="ft1 txt1 title2">Message for you,</p>
+        <div style="width: 100%;display: flex;justify-content: center;"><div style="width: 80%;">
+            <a class="ft1 txt1 desp1" id="desp1"></a><a class="ft1 txt1 desp1" onmouseover="mof1()" onmouseout="mof2()" onclick="amopen1()"><br><br><br>-Ryan<br><div style="height: 2px;width:0px;background-color: blue;transition: 1s;" id="u1" onclick="amopen1()"></div></a>
+            <div style="display: block;"><br>        
+            <div class="ebutton" id="ebutton1">
+                <button onclick="copy_text1()" class="button1 ft1">Copy</button>&nbsp;&nbsp;
+                <button onclick="copy_text2()" class="button1 ft1">Share</button>
+            </div>
+            <br>
+           </div>
+        </div>
+    </div>
+     </div>
+</div><br>
+<div class="fp1" id="fp1">
+    <div style="display: block;width: 100%;">
+        <div style="width: 100%;display: flex;justify-content: center;"><p class="ft1 vft1" >Congrats Dadu!!!</p></div>
+        <div style="width: 100%;display: flex;justify-content: center;"><p class="ft1 vft2" id="yt1">You turned:</p></div><br>
+        <div style="width: 100%;display: flex;justify-content: center;">
+            <div><a class="ft1 sn1">8</a></div>&nbsp;&nbsp;&nbsp;
+            <div style="display: block;overflow: hidden;height: 80px;width: 50px;position: relative;">
+                <a class="ft1 scn1" id="a">0</a><br>
+                <a class="ft1 scn2" id="b">1</a><br>
+            </div>
+            
+        </div>
+        <div style="width: 100%;display: flex;justify-content: center;"><button class="ft1 button1 gap1 anim2" id="close1" onclick="close1()">Great!!</button></div>
+    </div>
+    
+</div>
+<div class="about_me" id="about_me1">
+    <div class="about_box1">
+        <div style="margin-left: 5px;">
+            <a class="ft1 amt1">About me</a>
+        </div>
+            <div style="height: 4px;width: 100%;background-color: grey;"></div>
+        <br>
+        <div style="margin-left: 8px;">
+            <a class="ft1 amd1">Sarthak Raymondal also known as Sarthak Raymondal is a 14yr old programmer.He started his journey in </a><a class="ft1 amd1" href="https://scratch.mit.edu/">Scratch</a><a class="ft1 amd1">. He can program in Html,Css,Js,Python and Lua(Roblox).He is learning these languages in advance, but still he has a long way to go.He has specially crafted this card for his beloved grandfather Ramesh Chandra Raymondal.<br><br>All the credits are mentioned in the Github README</a>
+            <br><br>
+            <button class="button2 ft1" onclick="amclose1()">Close</button><br><br>
+        </div>
+    </div>
+</div>
+<div class="rcopy1" id="rcopy1"><a class="ft1 ct1">Copied to clipboard !!</a></div>
+<div class="rcopy1" id="rcopy2"><a class="ft1 ct1">Copied to clipboard !! Thanks for copying !!</a></div>
+<input type="text" id="ttc1" value= "Happy birthday Dadu, I wish you a very good Happy Bday and hope that your are having a good day.Your are very important person in our life who has shaped most of our lives to be a successful person. Your life may had many difficulties but you have worked to reach this far. We all love you and hope that you have a long and great life.So once again,happy birthday Dadu." style="display: none;">
+<input type="text" id="ttc2" value= "https://sarthakraymondal.github.io/Dadu-s-bday/" style="display: none;">
+<script src="./confetti.js"></script>
+<script>
+    var copy1 = 0;
+    var copy2 = 0;
+    const audio1 = new Audio("paper_slide.mp3")
+    const wow1 = new Audio("woww.mp3")//Can't use audio at starting due to permission missing!
+    var the_text = ""
+    var i = 0;
+    var text = "Happy birthday Dadu, I wish you a very good Happy Bday and hope that your are having a good day.Your are very important person in our life who has shaped most of our lives to be a successful person. Your life may had many difficulties but you have worked to reach this far. We all love you and hope that you have a long and great life.So once again,happy birthday Dadu.<span style='color:blue'>We all love you!!</span>"
+    var target = text.length
+            const start = () => {
+            setTimeout(function() {
+                confetti.start()
+            })}// Using start() also starts the confetti 
+    setTimeout(startup,500)
+    function startup() {
+            confetti.start()
+            document.getElementById("yt1").style.visibility = "visible"
+            document.getElementById("yt1").style.animationPlayState = "running"
+            document.getElementById("close1").style.visibility = "visible"
+            document.getElementById("close1").style.animationPlayState = "running"
+            document.getElementById("yt1").style.color = "gold"
+            document.getElementById("a").style.transform = "translateY(-100px)"
+            document.getElementById("b").style.transform = "translateY(-150px)"
+    }
+    function close1() {
+        document.getElementById("fp1").style.animationPlayState = "running"
+        setTimeout(rc1,700)
+    }
+    function rc1() {
+        confetti.stop()
+        document.getElementById("fp1").style.display = "none"
+        document.getElementById("body").style.overflowY = "scroll"
+    }
+    function mousein1() {
+        document.getElementById("chk1").innerHTML = "Open the card🎂"                
+    }
+    function mouseout1() {
+        document.getElementById("chk1").innerHTML = "Open the card"
+    }
+    function click1() {
+                audio1.play()
+                document.getElementById("back-card1").style.marginTop = "-45px"
+                setTimeout(f1a,500)
+    }
+    function f1a() {
+        document.getElementById("initial-cover1").style.animationPlayState = "running"
+        setTimeout(f1, 700)
+    }
+    function f1() {
+        document.getElementById("initial-cover1").style.display = "none"
+        document.getElementById("card1").style.display = "flex"
+        document.getElementById("card1").style.animationPlayState = "running"
+        i = 0
+        setTimeout(f2,500)
+    }
+    function f2() {
+        if(i >= target) {
+            setTimeout(f3,1000)
+        }
+        else {
+        the_text = the_text + text[i]
+        document.getElementById("desp1").innerHTML = the_text
+        i+=1
+        setTimeout(f2,10)
+        }
+    }
+    function mof1() {
+        document.getElementById("u1").style.width = "45px"
+    }
+    function mof2() {
+        document.getElementById("u1").style.width = "0px"
+    }
+    function about() {
+        alert("He's a boy!!")
+    }
+    function copy_text1() {
+  // Get the text field
+  var copyText = document.getElementById("ttc1");
+
+  // Select the text field
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); // For mobile devices
+
+   // Copy the text inside the text field
+  navigator.clipboard.writeText(copyText.value);
+  copya()
+}
+function copy_text2() {
+  // Get the text field
+  var copyText = document.getElementById("ttc2");
+
+  // Select the text field
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); // For mobile devices
+
+   // Copy the text inside the text field
+  navigator.clipboard.writeText(copyText.value);
+  copyb()
+}
+function f3() {
+    document.getElementById("ebutton1").style.display = "flex"
+    document.getElementById("ebutton1").style.animationPlayState = "running"
+}
+function amclose1() {
+    document.getElementById("about_me1").style.animationName = "anim1"
+    document.getElementById("about_me1").style.animationPlayState = "running"
+    setTimeout(ramclose1 , 700)
+}
+function ramclose1() {
+    document.getElementById("about_me1").style.display = "none"
+}
+function amopen1() {
+    document.getElementById("about_me1").style.display = "flex"
+    document.getElementById("about_me1").style.animationName = "anim2"
+    document.getElementById("about_me1").style.animationPlayState = "running"
+}
+function copya() {
+    if(copy1 === 0) {
+        copy1 = 1
+        document.getElementById("rcopy1").style.display = "flex"
+        setTimeout(rcd1, 5000)
+    }
+
+}
+function rcd1() {
+    copy1 = 0
+    document.getElementById("rcopy1").style.display = "none"
+}
+function copyb() {
+    if(copy2 === 0) {
+        copy2 = 1
+        document.getElementById("rcopy2").style.display = "flex"
+        setTimeout(rcd2, 5000)
+    }
+
+}
+function rcd2() {
+    copy2 = 0
+    document.getElementById("rcopy2").style.display = "none"
+}
+</script>
+</body>
+</html>
